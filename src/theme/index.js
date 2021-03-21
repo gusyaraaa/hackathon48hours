@@ -41,7 +41,12 @@ export default {
 		"shadowActivePodcaster": "#FED851",
 		"black": "#000000",
 		"background": "#fcfcfc",
-		"filterImage": "rgba(255, 193, 7, 0.43)"
+		"filterImage": "rgba(255, 193, 7, 0.43)",
+		"purpleTag": "#6D14C6",
+		"greenTag": "#14C65B",
+		"darkPurpleTag": "#44406F",
+		"yellowTag": "#FAD205",
+		"redTag": "#FA3105"
 	},
 	"fontFamily": {
 		"sans": "-apple-system, system-ui, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
@@ -185,5 +190,5 @@ export default {
 			}
 		}
 	},
-	"version": 78
+	"version": 88
 }

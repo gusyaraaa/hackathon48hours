@@ -140,22 +140,12 @@ const overrides = {
 		"props": {
 			"width": "100%",
 			"max-width": "100%"
-		},
-		"createBroadcastLink": {
-			"kind": "Link",
-			"props": {
-				"quarkly-title": "LinkLive",
-				"width": "64px",
-				"height": "64px",
-				"background": "rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/live-streaming%201.svg?v=2021-03-21T01:19:14.825Z) 0% 0% /100% no-repeat",
-				"lg-width": "50px",
-				"lg-height": "50px",
-				"md-height": "38px",
-				"md-width": "38px",
-				"sm-width": "24px",
-				"sm-height": "24px",
-				"href": "CreateBroadcast"
-			}
+		}
+	},
+	"createBroadcastLink": {
+		"kind": "Link",
+		"props": {
+			"href": "CreateBroadcast"
 		}
 	}
 };

@@ -1,9 +1,9 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Text, Box } from "@quarkly/widgets";
+import { Theme, Link, Image, Text, Button, Box } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
-import { Section, Override } from "@quarkly/components";
+import { Override, Section } from "@quarkly/components";
 import * as Components from "components";
 export default (() => {
 	return <Theme theme={theme}>
@@ -15,73 +15,104 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Section quarkly-title="Bio" />
+		<Section quarkly-title="Bio">
+			<Override slot="SectionContent" width="100%" padding="0px 20px 0px 20px" />
+			<Image width="64px" height="64px" quarkly-title="Avatar" />
+			<Box>
+				<Text quarkly-title="Name">
+					Some text
+				</Text>
+				<Text quarkly-title="id">
+					Some text
+				</Text>
+				<Button quarkly-title="Buy Subscribe">
+					Button
+				</Button>
+			</Box>
+		</Section>
+		<Section quarkly-title="My tags">
+			<Override slot="SectionContent" width="100%" padding="0px 20px 0px 20px" />
+			<Text font="600 28px sans-serif">
+				Мои теги
+			</Text>
+			<Box
+				quarkly-title="Container"
+				display="flex"
+				width="100%"
+				justify-content="space-around"
+				flex-wrap="wrap"
+				lg-justify-content="space-between"
+				sm-justify-content="space-between"
+				sm-flex-wrap="wrap"
+			>
+				<Components.Tag md-margin="0px 10px 0px 0px">
+					<Override slot="text" border-color="--color-purpleTag" color="--purpleTag">
+						Урбанистика
+					</Override>
+				</Components.Tag>
+				<Components.Tag md-margin="0px 10px 0px 0px">
+					<Override slot="text" />
+				</Components.Tag>
+				<Components.Tag md-margin="0px 10px 0px 0px">
+					<Override slot="text" color="--darkPurpleTag">
+						Физика
+					</Override>
+				</Components.Tag>
+				<Components.Tag md-margin="0px 10px 0px 0px">
+					<Override slot="text" color="--yellowTag">
+						Интеллектуальная помощь
+					</Override>
+				</Components.Tag>
+				<Components.Tag md-margin="0px 10px 0px 0px">
+					<Override slot="text" color="--redTag">
+						История
+					</Override>
+				</Components.Tag>
+			</Box>
+		</Section>
 		<Section quarkly-title="Following">
+			<Override slot="SectionContent" width="100%" padding="0px 20px 0px 20px" />
 			<Text font="600 28px sans-serif">
 				Мои подписки
 			</Text>
-			<Box quarkly-title="Container">
-				<Box
-					sm-width="162px"
-					sm-height="auto"
-					sm-background="#ffffff"
-					quarkly-title="Card"
-					sm-display="flex"
-					sm-flex-direction="column"
-					md-width="220px"
-					lg-width="300px"
-					lg-height="auto"
-					width="200px"
-					height="auto"
-					position="relative"
-				>
-					<Box
-						quarkly-title="Image"
-						sm-width="162px"
-						sm-height="162px"
-						sm-border-radius="25%"
-						sm-margin="0px 0px 10px 0px"
-						md-height="120px"
-						md-border-radius="25%"
-						lg-height="160px"
-						lg-border-radius="20%"
-						height="190px"
-						border-radius="20%"
-						background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%20707.png?v=2021-03-21T03:08:17.610Z) -5px/120% no-repeat"
-						lg-background="--color-background url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%20707.png?v=2021-03-21T03:08:17.610Z) -5px/120% no-repeat"
-						md-background="--color-background url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%20707.png?v=2021-03-21T03:08:17.610Z) -5px/120% no-repeat"
-						sm-background="--color-background url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%2068.png?v=2021-03-21T00:17:18.652Z) -3px/110% no-repeat"
-						width="190px"
-						lg-width="160px"
-						md-width="120px"
+			<Box quarkly-title="Container" display="flex" width="100%" justify-content="space-around">
+				<Components.FollowerCard />
+				<Components.FollowerCard>
+					<Override slot="text">
+						KUJ-podcast
+					</Override>
+					<Override
+						slot="box"
+						background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%20708.png?v=2021-03-21T03:08:17.607Z) -5px/120% no-repeat"
+						lg-background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%20708.png?v=2021-03-21T03:08:17.607Z) -5px/120% no-repeat"
+						md-background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%20708.png?v=2021-03-21T03:08:17.607Z) -5px/120% no-repeat"
+						sm-background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%20708.png?v=2021-03-21T03:08:17.607Z) -5px/120% no-repeat"
 					/>
-					<Box
-						quarkly-title="Texts"
-						sm-display="flex"
-						sm-flex-direction="column"
-						sm-justify-content="start"
-						sm-align-items="flex-start"
-					>
-						<Text
-							sm-height="15px"
-							sm-font="normal 12px sans-serif"
-							sm-text-align="left"
-							quarkly-title="Name's podcaster"
-							sm-margin="0 0px 0 0px"
-							sm-border-color="#4d4d4d"
-							sm-color="--fontGray"
-							md-font="16px sans-serif"
-							md-min-height="10px"
-							lg-min-height="14px"
-							min-height="18ox"
-							font="20px sans-serif"
-							color="--fontGray"
-							margin="0 0px 0 0px"
-						>
-							И. Варламов
-						</Text>
-					</Box>
-				</Box>
+				</Components.FollowerCard>
+				<Components.FollowerCard>
+					<Override slot="text">
+						Одно расстройство
+					</Override>
+					<Override
+						slot="box"
+						background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%20709.png?v=2021-03-21T03:08:17.611Z) -5px/120% no-repeat"
+						lg-background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%20709.png?v=2021-03-21T03:08:17.611Z) -5px/120% no-repeat"
+						md-background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%20709.png?v=2021-03-21T03:08:17.611Z) -5px/120% no-repeat"
+						sm-background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%20709.png?v=2021-03-21T03:08:17.611Z) -5px/120% no-repeat"
+					/>
+				</Components.FollowerCard>
+				<Components.FollowerCard>
+					<Override slot="text">
+						Так вышло
+					</Override>
+					<Override
+						slot="box"
+						background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%2068.png?v=2021-03-21T00:17:18.652Z) -5px/110% no-repeat"
+						lg-background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%2068.png?v=2021-03-21T00:17:18.652Z) -5px/110% no-repeat"
+						md-background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%2068.png?v=2021-03-21T00:17:18.652Z) 0/110% no-repeat"
+						sm-background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%2068.png?v=2021-03-21T00:17:18.652Z) 0/110% no-repeat"
+					/>
+				</Components.FollowerCard>
 			</Box>
 		</Section>
 		<Section quarkly-title="LastTimeListen" height="600px">

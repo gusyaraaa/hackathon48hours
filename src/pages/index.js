@@ -39,7 +39,13 @@ export default (() => {
 				/>
 			</Box>
 		</Section>
-		<Section quarkly-title="BodySection" color="--fontGray" font="--text" background="--color-background">
+		<Section
+			quarkly-title="BodySection"
+			color="--fontGray"
+			font="--text"
+			background="--color-background"
+			padding="24px 0 48px 0"
+		>
 			<Override slot="SectionContent" />
 			<Box quarkly-title="NearestPodcasts" margin="0px 0px 40px 0px">
 				<Text quarkly-title="Title" font="--t1" color="--black">

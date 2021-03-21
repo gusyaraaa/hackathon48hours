@@ -363,6 +363,8 @@ export default (() => {
 			<Override slot="link1" />
 			<Override slot="box" />
 			<Override slot="SectionContent" />
+			<Override slot="createBroadcastLink" position="static" width="100%" height="100%" />
+			<Override slot="icon" position="relative" top="16%" left="20%" />
 		</Components.NavBar>
 		<Link
 			font={"--capture"}
