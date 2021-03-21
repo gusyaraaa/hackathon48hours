@@ -3,7 +3,7 @@ import theme from "theme";
 import { Theme, Link, Box, Text } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
-import { Section } from "@quarkly/components";
+import { Override, Section } from "@quarkly/components";
 export default (() => {
 	return <Theme theme={theme}>
 		<GlobalQuarklyPageStyles pageUrl={"createbroadcast"} />
@@ -15,6 +15,7 @@ export default (() => {
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
 		<Section quarkly-title="MainSection" background="#FCFCFC" height="1300px">
+			<Override slot="SectionContent" />
 			<Box
 				display="flex"
 				width="250px"
@@ -53,9 +54,12 @@ export default (() => {
 				justify-content="center"
 				flex-direction="column"
 				margin="0px auto 0px auto"
+				background="#ffffff"
+				border-radius="20px"
+				box-shadow="5px 7px 20px 0 rgba(0, 0, 0, 0.75)"
 			>
 				<Box quarkly-title="LineBox" display="flex" width="100%" justify-content="left">
-					<Text quarkly-title="Box'sTest">
+					<Text quarkly-title="Box'sTest" margin="16px 0px 16px 20px">
 						Введите название трансляции{"\n\n"}
 					</Text>
 					<Box
