@@ -45,10 +45,10 @@ export default (() => {
 					bottom="-10%"
 				/>
 			</Box>
-			<Box quarkly-title="InputNamePodcast">
-				<Box quarkly-title="LineBox">
+			<Box quarkly-title="InputNamePodcast" display="flex" height="45px">
+				<Box quarkly-title="LineBox" display="flex" width="100%">
 					<Text quarkly-title="Box'sTest">
-						Some text
+						Введите название трансляции{"\n\n"}
 					</Text>
 					<Box
 						quarkly-title="RedPoint"
