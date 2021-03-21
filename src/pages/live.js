@@ -22,7 +22,7 @@ export default (() => {
 				</Text>
 			</Box>
 		</Section>
-		<Section quarkly-title="Main" background="--color-background" flex-wrap="wrap">
+		<Section quarkly-title="Main" background="--color-background" flex-wrap="wrap" height="1000px">
 			<Override
 				slot="SectionContent"
 				flex-direction="row"
@@ -85,7 +85,7 @@ export default (() => {
 						width="100%"
 						display="flex"
 						flex-direction="column"
-						justify-content="flex-start"
+						justify-content="start"
 						height="25%"
 					>
 						<Box
@@ -95,6 +95,8 @@ export default (() => {
 							md-height="auto"
 							md-display="flex"
 							display="flex"
+							justify-content="center"
+							width="100%"
 						>
 							<Image
 								width="3px"
