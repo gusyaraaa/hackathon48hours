@@ -30,6 +30,8 @@ export default (() => {
 				quarkly-title="Avatar"
 				src="https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%20706.png?v=2021-03-21T03:48:07.817Z"
 				lg-height="250px"
+				sm-width="300px"
+				sm-height="150p"
 			/>
 			<Box width="100%" margin="0px 0px 0px 20px" padding="0px 20p 0px 0px" height="auto">
 				<Box display="flex" align-items="center" justify-content="space-between" padding="0px 20px 0px 0px">
@@ -39,6 +41,7 @@ export default (() => {
 						font="--t1"
 						md-font="--t2"
 						sm-width="100%"
+						sm-font="--t3"
 					>
 						Бесарион Чохоевич
 					</Text>

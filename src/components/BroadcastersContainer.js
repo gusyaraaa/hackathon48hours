@@ -7,14 +7,17 @@ import CastersSection from "./CastersSection";
 import ListenersSection from "./ListenersSection";
 import FooterListeners from "./FooterListeners";
 import FooterBroadcasters from "./Footer";
-window.addEventListener("keydown", evt => {
-	console.log(evt);
 
-	if (evt.code === "Space" && window.isDmitry === true) {
-		console.log("speak on");
-		contoller.speakOn();
-	}
-});
+if (!window.keyListener) {
+	window.keyListener = window.addEventListener("keydown", evt => {
+		console.log(evt);
+
+		if (evt.code === "Space" && window.isDmitry === true) {
+			console.log("speak on");
+			contoller.speakOn();
+		}
+	});
+}
 
 const BroadcastersPanel = props => {
 	const [panel, setPanel] = useState("broadcasters");
