@@ -17,7 +17,7 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Section quarkly-title="HeaderSection">
+		<Section quarkly-title="HeaderSection" background="--color-background">
 			<Override slot="SectionContent" />
 			<Box
 				quarkly-title="HeaderTitleBox"
@@ -41,14 +41,11 @@ export default (() => {
 				</Text>
 			</Box>
 			<Box quarkly-title="BroadcastTitleBox">
-				<Text quarkly-title="BroadcastTitle">
-					&lt;BroadcastName&gt;
+				<Text quarkly-title="BroadcastTitle" font="--t2">
+					Женщина, вы кто?{"\n\n"}
 				</Text>
-				<Text quarkly-title="BroadcastDescription">
-					&lt;BroadcastDescription&gt;
-				</Text>
-				<Text quarkly-title="Count" color="--grey">
-					1.5к+
+				<Text quarkly-title="BroadcastDescription" font="--text" color="--fontGray">
+					Обсуждаем чебуреки. Ставьте  ❤, если любите с сыром, и ✌🏻 если любите с мясом{"\n\n"}
 				</Text>
 			</Box>
 		</Section>
@@ -60,6 +57,8 @@ export default (() => {
 			md-justify-content="space-evenly"
 			sm-height="auto"
 			sm-min-height="500px"
+			display="block"
+			background="--color-background"
 		>
 			<Override
 				slot="SectionContent"
@@ -71,20 +70,29 @@ export default (() => {
 				justify-content="space-between"
 				height="800px"
 			/>
-			<Components.PodcasterCard>
-				<Override slot="text" />
+			<Components.PodcasterCard display="flex" background="#ffffff">
+				<Override slot="text" font="--t2" />
 				<Override slot="box" />
 			</Components.PodcasterCard>
-			<Components.PodcasterCard>
-				<Override slot="text" />
+			<Components.PodcasterCard box-shadow="--shadow" background="#ffffff">
+				<Override slot="text" font="--t2">
+					Владимир Путин
+				</Override>
 				<Override slot="box" background="#838383 url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/square_320_bb4b277b65949db59997d7938661b118.jpg?v=2021-03-21T00:35:44.602Z) bottom/100%" />
 			</Components.PodcasterCard>
-			<Components.PodcasterCard>
-				<Override slot="text1" sm-display="block" display="block" font="--text" />
-				<Override slot="text">
+			<Components.PodcasterCard box-shadow="--shadow" background="#ffffff">
+				<Override
+					slot="text1"
+					sm-display="block"
+					display="block"
+					font="--text"
+					color="--fontGray"
+				/>
+				<Override slot="text" font="--t2">
 					Покемон Пикачу
 				</Override>
 				<Override slot="box" background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Ash_Pikachu.png?v=2021-03-21T00:43:20.111Z) 0% 0%/100% no-repeat" />
+				<Override slot="box1" font="--t2" />
 			</Components.PodcasterCard>
 		</Section>
 		<Section quarkly-title="FooterSection">
@@ -92,7 +100,22 @@ export default (() => {
 				<Box quarkly-title="AudioSticker">
 					<Icon category="md" icon={MdVolumeUp} />
 				</Box>
-				<Components.BroadcastButton sm-box-shadow="--podcasterShadow" box-shadow="--podcasterShadow" />
+				<Components.BroadcastButton
+					sm-box-shadow="--podcasterShadow"
+					height="42px"
+					width="150px"
+					background="#fff"
+					box-shadow="--shadow"
+				>
+					<Override
+						slot="box"
+						height="30px"
+						width="80px"
+						margin="6px 0px 5px 4px"
+						box-shadow="--shadow"
+						background="#ffd439"
+					/>
+				</Components.BroadcastButton>
 				<Box quarkly-title="Sticker">
 					<Icon category="gi" icon={GiBulletImpacts} />
 				</Box>

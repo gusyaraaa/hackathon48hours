@@ -41,7 +41,11 @@ const defaultProps = {
 	"border-radius": "40px",
 	"lg-border-radius": "35px",
 	"md-border-radius": "30px",
-	"sm-border-radius": "25px"
+	"sm-border-radius": "25px",
+	"margin": "0px 0px 40px 0px",
+	"lg-margin": "0px 0px 30px 0px",
+	"sm-margin": "0px 0px 10px 0px",
+	"md-margin": "0px 0px 20px 0px"
 };
 const overrides = {
 	"box": {
@@ -51,18 +55,15 @@ const overrides = {
 			"sm-height": "78px",
 			"sm-width": "78px",
 			"sm-border-radius": "25px",
-			"sm-background": "#7f7f7f",
 			"sm-position": "absolute",
 			"sm-left": "-3px",
 			"md-height": "100px",
 			"md-width": "100px",
-			"md-background": "#a5a5a5",
 			"md-border-radius": "30px",
 			"md-position": "absolute",
 			"md-left": "-3px",
 			"lg-width": "133px",
 			"lg-height": "133px",
-			"lg-background": "#c5c5c5",
 			"lg-border-radius": "35px",
 			"lg-left": "-3px",
 			"lg-position": "absolute",
@@ -70,7 +71,6 @@ const overrides = {
 			"left": "-3px",
 			"width": "163px",
 			"height": "163px",
-			"background": "#838383",
 			"border-radius": "40px",
 			"sm-top": "-3px",
 			"lg-top": "-3px",
@@ -80,7 +80,11 @@ const overrides = {
 			"bottom": "auto",
 			"right": "auto",
 			"border-style": "solid",
-			"md-top": "-3px"
+			"md-top": "-3px",
+			"background": "--color-background url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%20706.png?v=2021-03-21T03:48:07.817Z) 0% 0%/110% no-repeat",
+			"lg-background": "#c5c5c5 url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%20706.png?v=2021-03-21T03:48:07.817Z) 0% 0%/110% no-repeat",
+			"md-background": "#c5c5c5 url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%20706.png?v=2021-03-21T03:48:07.817Z) 0% 0%/110% no-repeat",
+			"sm-background": "#c5c5c5 url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%20706.png?v=2021-03-21T03:48:07.817Z) 0% 0%/110% no-repeat"
 		}
 	},
 	"box1": {
@@ -132,11 +136,11 @@ const overrides = {
 			"quarkly-title": "Name",
 			"sm-font": "13px sans-serif",
 			"lg-font": "20px sans-serif",
-			"font": "400 24px sans-serif",
 			"sm-margin": "0 0px 0 0px",
 			"md-margin": "0 0px 0 0px",
 			"lg-margin": "0 0px 0 0px",
-			"children": "Остап Бендер"
+			"children": "Остап Бендер",
+			"font": "--t2"
 		}
 	},
 	"image": {

@@ -13,7 +13,8 @@ const defaultProps = {
 	"lg-height": "auto",
 	"width": "350px",
 	"height": "auto",
-	"position": "relative"
+	"position": "relative",
+	"margin-bottom": "0px"
 };
 const overrides = {
 	"box": {
@@ -47,11 +48,12 @@ const overrides = {
 			"sm-margin": "0px 0px 10px 0px",
 			"md-height": "220px",
 			"md-border-radius": "25%",
-			"lg-height": "300px",
+			"lg-height": "330px",
 			"lg-border-radius": "20%",
-			"height": "350px",
+			"height": "340px",
 			"border-radius": "20%",
 			"position": "absolute",
+			"top": "-3px",
 			"width": "100%",
 			"display": "flex",
 			"align-items": "center",
@@ -68,7 +70,7 @@ const overrides = {
 		"props": {
 			"color": "--black",
 			"font": "500 20px Roboto, sans-serif",
-			"margin": "16px 0px 25px 0px",
+			"margin": "10px 0px 75px 0px",
 			"children": "17 марта 19:00"
 		}
 	},
@@ -89,7 +91,7 @@ const overrides = {
 			"sm-font": "normal 13px sans-serif",
 			"sm-text-align": "left",
 			"quarkly-title": "Name podcast",
-			"sm-margin": "0 0px 5px 0px",
+			"sm-margin": "0px 0px 5px 0px",
 			"sm-max-height": "30px",
 			"sm-min-height": "15px",
 			"md-min-height": "10px",
@@ -108,7 +110,7 @@ const overrides = {
 			"sm-font": "normal 12px sans-serif",
 			"sm-text-align": "left",
 			"quarkly-title": "Name's podcaster",
-			"sm-margin": "0 0px 0 0px",
+			"sm-margin": "0px 0px 0 0px",
 			"sm-border-color": "#4d4d4d",
 			"sm-color": "--fontGray",
 			"md-font": "14px sans-serif",

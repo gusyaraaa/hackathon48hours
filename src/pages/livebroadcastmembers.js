@@ -74,8 +74,9 @@ export default (() => {
 				padding="0px 30px 0px 30px"
 				align-items="center"
 			/>
-			<Components.DonateListeners margin="0px 0px 40px 0px" lg-margin="0px 0px 30px 0px" sm-margin="0px 0px 10px 0px" md-margin="0px 0px 20px 0px">
-				<Override slot="text" font="--t2" />
+			<Components.DonateListeners>
+				<Override slot="text" />
+				<Override slot="box" />
 			</Components.DonateListeners>
 			<Components.DonateListeners margin="0px 0px 40px 0px" lg-margin="0px 0px 30px 0px" sm-margin="0px 0px 10px 0px" md-margin="0px 0px 20px 0px">
 				<Override slot="box2" font="--t2" />
@@ -94,23 +95,22 @@ export default (() => {
 		<Section quarkly-title="FooterSection">
 			<Box height="28px">
 				<Components.BroadcastButton
-					max-width="115px"
-					margin="0px auto 4px auto"
-					height="24px"
-					display="flex"
-					flex-direction="column"
-					justify-content="center"
-					box-shadow="--podcasterShadow"
+					max-width="50%"
+					width="150px"
+					height="42px"
+					margin="0px auto 0px auto"
+					box-shadow="--shadow"
 				>
 					<Override
 						slot="box"
-						display="block"
-						background="#8F338C"
+						width="80px"
+						height="30px"
+						box-shadow="--shadow"
+						margin="4px 0px 0px 50%"
 						position="relative"
-						right="2px"
-						bottom="4px"
-						margin="6px 0px 0px 50%"
-						box-shadow="1px 1px 2px 1px rgba(0, 0, 0, 0.67)"
+						top="15%"
+						background="#922bb7"
+						right="3%"
 					/>
 				</Components.BroadcastButton>
 			</Box>

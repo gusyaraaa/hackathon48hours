@@ -3,7 +3,7 @@ import theme from "theme";
 import { Theme, Link, Box, Input, Button } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
-import { Override, Section } from "@quarkly/components";
+import { Section, Override } from "@quarkly/components";
 import * as Components from "components";
 export default (() => {
 	return <Theme theme={theme}>
@@ -16,7 +16,6 @@ export default (() => {
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
 		<Section quarkly-title="MainSection" background="#FCFCFC" height="auto" padding="30px 0 200px 0">
-			<Override slot="SectionContent" />
 			<Box
 				display="flex"
 				width="250px"
@@ -79,13 +78,17 @@ export default (() => {
 				type="text"
 				name="description"
 				padding="20px 20px 20px 20px"
-				border-width={0}
-				border-color="--color-fontGray"
 				box-shadow="--podcasterShadow"
 				border-radius="15px"
 				margin="0px 0px 40px 0px"
 				md-padding="15px 15px 15px 15px"
 				md-margin="0px 0px 30px 0px"
+				as="textarea"
+				height="auto"
+				min-width="100%"
+				min-height="120px"
+				max-width="100%"
+				max-height="180px"
 			/>
 			<Button
 				width="300px"
@@ -101,7 +104,11 @@ export default (() => {
 				Начать
 			</Button>
 		</Section>
-		<Components.NavBar />
+		<Components.NavBar>
+			<Override slot="link" width="50px" height="50px" />
+			<Override slot="link1" width="50px" height="50px" />
+			<Override slot="link3" width="50px" height="50px" />
+		</Components.NavBar>
 		<Link
 			font={"--capture"}
 			font-size={"10px"}

@@ -63,46 +63,28 @@ const overrides = {
 			"href": "index"
 		}
 	},
-	"box1": {
-		"kind": "Box",
+	"link2": {
+		"kind": "Link",
 		"props": {
-			"quarkly-title": "StartLive",
-			"lg-display": "flex",
-			"lg-background": "--color-background",
-			"lg-border-radius": "50%",
-			"lg-right": "10px",
-			"lg-border-width": "10px",
-			"lg-border-style": "solid",
-			"lg-border-color": "rgba(0, 0, 0, 0)",
-			"lg-hover-cursor": "pointer",
-			"position": "static",
-			"bottom": "auto",
-			"right": "297px",
-			"cursor": "pointer",
-			"border-width": "10px",
-			"border-style": "solid",
-			"border-color": "rgba(0, 0, 0, 0)",
+			"href": "CreateBroadcast",
+			"width": "80px",
+			"height": "80px",
 			"border-radius": "50%",
-			"box-shadow": "--podcasterShadow",
-			"width": "64px",
-			"height": "64px",
+			"background": "--color-background",
 			"display": "flex",
-			"flex-direction": "column",
 			"align-items": "center",
 			"justify-content": "center",
-			"top": "-47px",
-			"left": "auto",
+			"box-shadow": "--podcasterShadow",
 			"margin": "-60px 0px 0px 0px",
-			"md-width": "38px",
-			"md-height": "38px",
-			"sm-width": "24px",
-			"sm-height": "24px",
-			"lg-margin": "-55px 0px 0px 0px",
-			"md-margin": "-50px 0px 0px 0px",
-			"sm-margin": "-40px 0px 0px 0px",
-			"lg-width": "50px",
-			"lg-height": "50px",
-			"background": "--color-background"
+			"quarkly-title": "LinkRoom",
+			"lg-width": "64px",
+			"lg-height": "64px",
+			"md-width": "52px",
+			"md-height": "52px",
+			"lg-margin": "-50px 0px 0px 0px",
+			"sm-width": "40px",
+			"sm-height": "40px",
+			"sm-margin": "-35px 0px 0px 0px"
 		}
 	},
 	"icon": {
@@ -120,7 +102,7 @@ const overrides = {
 			"sm-font": "24px sans-serif"
 		}
 	},
-	"link2": {
+	"link3": {
 		"kind": "Link",
 		"props": {
 			"quarkly-title": "LinkLive",
@@ -135,18 +117,6 @@ const overrides = {
 			"sm-height": "24px",
 			"href": "Live"
 		}
-	},
-	"SectionContent": {
-		"props": {
-			"width": "100%",
-			"max-width": "100%"
-		}
-	},
-	"createBroadcastLink": {
-		"kind": "Link",
-		"props": {
-			"href": "CreateBroadcast"
-		}
 	}
 };
 
@@ -157,16 +127,20 @@ const NavBar = props => {
 		rest
 	} = useOverrides(props, overrides, defaultProps);
 	return <Section {...rest}>
-		<Override slot="SectionContent" margin="0px 0 0px 0" width="100%" height="100%" />
+		<Override
+			slot="SectionContent"
+			margin="0px 0 0px 0"
+			width="100%"
+			height="100%"
+			max-width="100%"
+		/>
 		<Box {...override("box")}>
 			<Link {...override("link")} />
 			<Link {...override("link1")} />
-			<Link {...override("createBroadcastLink")}>
-				<Box {...override("box1")}>
-					<Icon {...override("icon")} />
-				</Box>
+			<Link {...override("link2")}>
+				<Icon {...override("icon")} />
 			</Link>
-			<Link {...override("link2")} />
+			<Link {...override("link3")} />
 		</Box>
 		{children}
 	</Section>;
