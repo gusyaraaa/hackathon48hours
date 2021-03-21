@@ -45,12 +45,13 @@ export default (() => {
 						md-border-radius="25%"
 						lg-height="300px"
 						lg-border-radius="20%"
-						height="350px"
+						height="200px"
 						border-radius="20%"
 						background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%2064.png?v=2021-03-21T00:17:18.652Z) -5px/115% no-repeat"
 						lg-background="--color-background url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%2064.png?v=2021-03-21T00:17:18.652Z) -5px/110% no-repeat"
 						md-background="--color-background url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%2065.png?v=2021-03-21T00:17:18.651Z) -5px/115% no-repeat"
 						sm-background="--color-background url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Rectangle%2068.png?v=2021-03-21T00:17:18.652Z) -3px/110% no-repeat"
+						width="200px"
 					/>
 					<Box
 						quarkly-title="Texts"
@@ -59,21 +60,6 @@ export default (() => {
 						sm-justify-content="start"
 						sm-align-items="flex-start"
 					>
-						<Text
-							sm-font="normal 13px sans-serif"
-							sm-text-align="left"
-							quarkly-title="Name podcast"
-							sm-margin="0 0px 5px 0px"
-							sm-max-height="30px"
-							sm-min-height="15px"
-							md-min-height="10px"
-							lg-min-height="14px"
-							lg-font="18px sans-serif"
-							min-height="18px"
-							font="24px sans-serif"
-						>
-							Почему никому невозможно верить{"\n\n"}
-						</Text>
 						<Text
 							sm-height="15px"
 							sm-font="normal 12px sans-serif"
@@ -87,6 +73,7 @@ export default (() => {
 							lg-min-height="14px"
 							min-height="18ox"
 							font="20px sans-serif"
+							color="--fontGray"
 						>
 							Так вышло{"\n\n"}
 						</Text>
