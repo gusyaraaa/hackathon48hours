@@ -15,7 +15,7 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Section quarkly-title="Bio" md-padding="70px 0 24px 0" padding="70px 0 24px 0">
+		<Section quarkly-title="Bio" md-padding="70px 0 24px 0" padding="70px 0 24px 0" background="--color-background">
 			<Override
 				slot="SectionContent"
 				width="100%"
@@ -47,7 +47,7 @@ export default (() => {
 				</Button>
 			</Box>
 		</Section>
-		<Section quarkly-title="My tags">
+		<Section quarkly-title="My tags" background="--color-background">
 			<Override slot="SectionContent" width="100%" padding="0px 20px 0px 20px" />
 			<Text font="600 28px sans-serif">
 				Мои теги
@@ -91,7 +91,7 @@ export default (() => {
 				</Components.Tag>
 			</Box>
 		</Section>
-		<Section quarkly-title="Following">
+		<Section quarkly-title="Following" background="--color-background">
 			<Override slot="SectionContent" width="100%" padding="0px 20px 0px 20px" />
 			<Text font="600 28px sans-serif">
 				Мои подписки
@@ -144,7 +144,7 @@ export default (() => {
 				</Components.FollowerCard>
 			</Box>
 		</Section>
-		<Section quarkly-title="LastTimeListen" height="600px">
+		<Section quarkly-title="LastTimeListen" height="600px" background="--color-background">
 			<Override slot="SectionContent" width="100%" padding="0px 20px 0px 20px" />
 			<Text font="600 28px sans-serif">
 				Последние прослушивания
@@ -161,7 +161,9 @@ export default (() => {
 				<Components.Card lg-display="none" sm-display="none" />
 			</Box>
 		</Section>
-		<Components.NavBar />
+		<Components.NavBar>
+			<Override slot="box" background="#ffffff" />
+		</Components.NavBar>
 		<Link
 			font={"--capture"}
 			font-size={"10px"}
