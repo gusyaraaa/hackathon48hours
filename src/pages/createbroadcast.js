@@ -19,7 +19,7 @@ export default (() => {
 			<Box
 				display="flex"
 				width="250px"
-				height="auto"
+				height="250p"
 				margin="70px auto 30px auto"
 				quarkly-title="Avatar"
 				min-width="200px"
@@ -28,7 +28,7 @@ export default (() => {
 			>
 				<Box
 					quarkly-title="Image"
-					background="rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Ash_Pikachu.png?v=2021-03-21T00:43:20.111Z) 0% 0% /100% no-repeat scroll border-box"
+					background="rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Ash_Pikachu.png?v=2021-03-21T00:43:20.111Z) 0% 0% /100% no-repeat"
 					width="300px"
 					height="300px"
 					border-radius="100px"
@@ -47,7 +47,7 @@ export default (() => {
 				padding="20px 20px 20px 20px"
 				border-width={0}
 				border-color="rgba(119, 119, 119, 0.47)"
-				box-shadow="--podcasterShadow"
+				box-shadow="--shadow"
 				border-radius="15px"
 				margin="0px 0px 20px 0px"
 				md-padding="15px 15px 15px 15px"
@@ -65,7 +65,7 @@ export default (() => {
 				padding="20px 20px 20px 20px"
 				border-width={0}
 				border-color="--color-fontGray"
-				box-shadow="--podcasterShadow"
+				box-shadow="--shadow"
 				border-radius="15px"
 				margin="0px 0px 20px 0px"
 				md-padding="15px 15px 15px 15px"
@@ -79,7 +79,7 @@ export default (() => {
 				type="text"
 				name="description"
 				padding="20px 20px 20px 20px"
-				box-shadow="--podcasterShadow"
+				box-shadow="--shadow"
 				border-radius="15px"
 				margin="0px 0px 40px 0px"
 				md-padding="15px 15px 15px 15px"
@@ -99,7 +99,7 @@ export default (() => {
 				background="#FED851"
 				border-radius="20px"
 				font="--t2"
-				box-shadow="--podcasterShadow"
+				box-shadow="--shadow"
 				md-padding="5px 20px 5px 20px"
 				md-font="24px Roboto"
 			>
@@ -110,6 +110,8 @@ export default (() => {
 			<Override slot="link" width="50px" height="50px" />
 			<Override slot="link1" width="50px" height="50px" />
 			<Override slot="link3" width="50px" height="50px" />
+			<Override slot="box" box-shadow="--shadow" />
+			<Override slot="link2" box-shadow="--shadow" />
 		</Components.NavBar>
 		<Link
 			font={"--capture"}

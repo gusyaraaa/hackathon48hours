@@ -3,7 +3,7 @@ import theme from "theme";
 import { Theme, Link, Image, Text, Box } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
-import { Section } from "@quarkly/components";
+import { Override, Section } from "@quarkly/components";
 import * as Components from "components";
 export default (() => {
 	return <Theme theme={theme}>
@@ -50,9 +50,21 @@ export default (() => {
 					Презентация уникальной стриминговой платформы
 				</Text>
 			</Box>
-			<Components.ListenersSection />
+			<Components.ListenersSection>
+				<Override slot="donateListeners1" box-shadow="--shadow" />
+				<Override slot="plebsListener" box-shadow="--shadow" />
+				<Override slot="plebsListener1" box-shadow="--shadow" />
+				<Override slot="plebsListener2" box-shadow="--shadow" />
+				<Override slot="plebsListener3" box-shadow="--shadow" />
+				<Override slot="plebsListener4" box-shadow="--shadow" />
+				<Override slot="plebsListener5" box-shadow="--shadow" />
+				<Override slot="plebsListener6" box-shadow="--shadow" />
+			</Components.ListenersSection>
 		</Section>
-		<Components.FooterListeners />
+		<Components.FooterListeners>
+			<Override slot="broadcastButton" box-shadow="--shadow" />
+			<Override slot="broadcastButtonOverride" box-shadow="--shadow" />
+		</Components.FooterListeners>
 		<Link
 			font={"--capture"}
 			font-size={"10px"}

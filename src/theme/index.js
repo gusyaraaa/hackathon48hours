@@ -71,7 +71,8 @@ export default {
 		"t2": "450 24px --fontFamily-googleRoboto",
 		"text": "18px --fontFamily-googleRoboto",
 		"colvoLudei": "14px --fontFamily-googleRoboto",
-		"t3": "450 16px --fontFamily-googleRoboto"
+		"t3": "450 16px --fontFamily-googleRoboto",
+		"t4": "700 24px --fontFamily-googleRoboto"
 	},
 	"boxShadow": {
 		"m": "0 4px 5px -1px rgba(0, 0, 0, 0.1)",
@@ -80,7 +81,7 @@ export default {
 		"xxl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
 		"podcasterShadow": "6px 4px 10px rgba(237, 218, 255, 0.8)",
 		"podcastShadowActive": "0 0 10px --color-shadowActivePodcaster",
-		"shadow": "6px 4px 10px rgba(237, 218, 255, 0.5)"
+		"shadow": "6px 4px 10px #e2e2e2"
 	},
 	"background": {
 		"primaryGradient": "linear-gradient(180deg, --color-primary, transparent) no-repeat 0 0",
@@ -194,5 +195,5 @@ export default {
 			}
 		}
 	},
-	"version": 99
+	"version": 100
 }

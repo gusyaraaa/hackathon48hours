@@ -1,9 +1,9 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Image, Text, Box } from "@quarkly/widgets";
+import { Theme, Link, Text, Box } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
-import { Override, Section } from "@quarkly/components";
+import { Section, Override } from "@quarkly/components";
 import * as Components from "components";
 export default (() => {
 	return <Theme theme={theme}>
@@ -16,7 +16,6 @@ export default (() => {
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
 		<Section quarkly-title="HeaderSection" background="--color-background">
-			<Override slot="SectionContent" />
 			<Box
 				quarkly-title="HeaderTitleBox"
 				margin="50px 0px 0px 15px"
@@ -29,7 +28,7 @@ export default (() => {
 				md-margin="50px 0px 0px 0"
 			>
 				<Box display="flex" align-items="center">
-					<Image width="64px" height="64px" src="https://uploads.quarkly.io/6056093da1e3530020715a39/images/5.svg?v=2021-03-21T07:26:15.829Z" md-margin="0px 0px 0px -10px" />
+					<Components.BackArrow />
 					<Text
 						quarkly-title="Title"
 						sm-font="--t1"
@@ -46,15 +45,20 @@ export default (() => {
 			</Box>
 			<Box quarkly-title="BroadcastTitleBox">
 				<Text quarkly-title="BroadcastTitle" font="--t2">
-					Презентация Podcaster{"\n\n"}
+					Презентация Podcaster
 				</Text>
 				<Text quarkly-title="BroadcastDescription" font="--text" color="--fontGray">
-					Обсуждаем чебуреки. Ставьте  ❤, если любите с сыром, и ✌🏻 если любите с мясом{"\n\n"}
+					Обсуждаем чебуреки. Ставьте  ❤, если любите с сыром, и ✌🏻 если любите с мясом
 				</Text>
 			</Box>
 		</Section>
-		<Section quarkly-title="Content">
-			<Components.BroadcastersContainer />
+		<Section quarkly-title="Content" background="--color-background">
+			<Components.BroadcastersContainer>
+				<Override slot="broadcastButton" box-shadow="--shadow" />
+				<Override slot="broadcastButtonOverride" box-shadow="--shadow" />
+				<Override slot="podcasterCard1" box-shadow="--shadow" />
+				<Override slot="podcasterCard2" box-shadow="--shadow" />
+			</Components.BroadcastersContainer>
 		</Section>
 		<Link
 			font={"--capture"}

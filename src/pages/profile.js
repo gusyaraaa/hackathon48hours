@@ -32,6 +32,7 @@ export default (() => {
 				lg-height="250px"
 				sm-width="300px"
 				sm-height="150p"
+				box-shadow="--shadow"
 			/>
 			<Box width="100%" margin="0px 0px 0px 20px" padding="0px 20p 0px 0px" height="auto">
 				<Box display="flex" align-items="center" justify-content="space-between" padding="0px 20px 0px 0px">
@@ -66,6 +67,7 @@ export default (() => {
 					font="normal 700 16px/120% --fontFamily-sans"
 					margin="20px 0px 0px 0px"
 					height="60px"
+					box-shadow="--shadow"
 				>
 					Оформить подписку
 				</Button>
@@ -197,10 +199,11 @@ export default (() => {
 			</Box>
 		</Section>
 		<Components.NavBar>
-			<Override slot="box" background="#ffffff" />
+			<Override slot="box" background="#ffffff" box-shadow="--shadow" />
 			<Override slot="link" width="50px" />
 			<Override slot="link1" width="50px" />
 			<Override slot="link3" width="50px" />
+			<Override slot="link2" box-shadow="--shadow" />
 		</Components.NavBar>
 		<Link
 			font={"--capture"}

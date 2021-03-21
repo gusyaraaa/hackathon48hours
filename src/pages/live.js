@@ -36,13 +36,14 @@ export default (() => {
 				flex-wrap="wrap"
 				font="400 18px --fontFamily-googleRoboto"
 				color="--black"
+				lg-margin="0px 43.5469px 100px 43.5469px"
 			/>
 			<Box
 				height="362px"
 				margin="10px auto 50px auto"
 				background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/4.svg?v=2021-03-21T06:42:09.494Z) 0% 50%/100% repeat-x"
-				border-radius="20px"
-				box-shadow="--podcasterShadow"
+				border-radius="25px"
+				box-shadow="--shadow"
 				align-self="center"
 				display="flex"
 				flex-direction="column"
@@ -106,7 +107,7 @@ export default (() => {
 							lg-max-width="none"
 							lg-width="100px"
 							width="110px"
-							src="https://uploads.quarkly.io/6056093da1e3530020715a39/images/square_320_bbadfd5684fdbc4c0c1006cf1b9a9b7d.jpg?v=2021-03-21T00:33:25.501Z"
+							src="https://uploads.quarkly.io/6056093da1e3530020715a39/images/_XwDijOPNLY.jpg?v=2021-03-21T08:44:58.597Z"
 						/>
 						{"        "}{"    "}
 					</StackItem>
@@ -142,7 +143,7 @@ export default (() => {
 							md-width="100%"
 							md-font="450 16px Roboto, sans-serif"
 						>
-							Женщина, вы кто?{"\n\n"}
+							Презентация Podcaster
 						</Text>
 					</Box>
 					<Box
@@ -165,7 +166,7 @@ export default (() => {
 							width="300px"
 							sm-padding="0px 0px 0px 10px"
 						>
-							Анастасия Ивлеева
+							Дмитрий Борисов
 						</Text>
 						<Text
 							margin="0 0px 0px 300px"
@@ -186,8 +187,8 @@ export default (() => {
 				height="362px"
 				margin="10px auto 50px auto"
 				background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/1.svg?v=2021-03-21T06:31:14.318Z) 0% 50%/100% repeat-x"
-				border-radius="20px"
-				box-shadow="--podcasterShadow"
+				border-radius="25px"
+				box-shadow="--shadow"
 				align-self="center"
 				display="flex"
 				flex-direction="column"
@@ -325,10 +326,10 @@ export default (() => {
 			</Box>
 			<Box
 				height="362px"
-				margin="10px auto 50px auto"
+				margin="10px auto 140px auto"
 				background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/2.svg?v=2021-03-21T06:31:37.586Z) 0% 50%/100% repeat-x"
-				border-radius="20px"
-				box-shadow="--podcasterShadow"
+				border-radius="25px"
+				box-shadow="--shadow"
 				align-self="center"
 				display="flex"
 				flex-direction="column"
@@ -467,15 +468,16 @@ export default (() => {
 				</Stack>
 			</Box>
 		</Section>
-		<Components.NavBar>
+		<Components.NavBar margin="0 0 0 0">
 			<Override slot="link1" width="50px" height="50px" />
-			<Override slot="box" />
+			<Override slot="box" box-shadow="--shadow" />
 			<Override slot="SectionContent" />
 			<Override slot="createBroadcastLink" margin="-60px 0px 0px 0px" />
 			<Override slot="icon" top="16%" left="20%" />
 			<Override slot="box1" margin="0px 0px 0px 0px" />
 			<Override slot="link" width="50px" height="50px" />
 			<Override slot="link3" width="50px" height="50px" />
+			<Override slot="link2" box-shadow="--shadow" />
 		</Components.NavBar>
 		<Link
 			font={"--capture"}
