@@ -1,12 +1,10 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Icon, Text, Box } from "@quarkly/widgets";
+import { Theme, Link, Image, Text, Box } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
 import { Override, Section } from "@quarkly/components";
 import * as Components from "components";
-import { MdArrowBack, MdVolumeUp } from "react-icons/md";
-import { GiBulletImpacts } from "react-icons/gi";
 export default (() => {
 	return <Theme theme={theme}>
 		<GlobalQuarklyPageStyles pageUrl={"livebroadcast"} />
@@ -25,101 +23,38 @@ export default (() => {
 				sm-display="flex"
 				sm-align-items="center"
 				sm-justify-content="start"
+				display="flex"
+				align-items="center"
+				justify-content="flex-start"
+				md-margin="50px 0px 0px 0"
 			>
-				<Icon category="md" icon={MdArrowBack} display="inline" margin="0px 4px 0px 0px" />
-				<Text
-					quarkly-title="Title"
-					sm-font="--lgHeadline4"
-					margin="0px 0px 16px 0px"
-					display="inline"
-					sm-margin="0px 0px 0 0px"
-					font="--t1"
-					lg-font="--lgHeadline2"
-					md-font="--lgHeadline3"
-				>
-					Прямой эфир
-				</Text>
+				<Box display="flex" align-items="center">
+					<Image width="64px" height="64px" src="https://uploads.quarkly.io/6056093da1e3530020715a39/images/5.svg?v=2021-03-21T07:26:15.829Z" md-margin="0px 0px 0px -10px" />
+					<Text
+						quarkly-title="Title"
+						sm-font="--t1"
+						margin="0px 0px 0 0px"
+						display="inline"
+						sm-margin="0px 0px 0 0px"
+						font="--t1"
+						lg-font="--t1"
+						md-font="--lgHeadline3"
+					>
+						Прямой эфир
+					</Text>
+				</Box>
 			</Box>
 			<Box quarkly-title="BroadcastTitleBox">
 				<Text quarkly-title="BroadcastTitle" font="--t2">
-					Женщина, вы кто?{"\n\n"}
+					Презентация Podcaster{"\n\n"}
 				</Text>
 				<Text quarkly-title="BroadcastDescription" font="--text" color="--fontGray">
 					Обсуждаем чебуреки. Ставьте  ❤, если любите с сыром, и ✌🏻 если любите с мясом{"\n\n"}
 				</Text>
 			</Box>
 		</Section>
-		<Section
-			quarkly-title="BodySection"
-			sm-flex-direction="column"
-			sm-align-items="center"
-			md-flex-direction="column"
-			md-justify-content="space-evenly"
-			sm-height="auto"
-			sm-min-height="500px"
-			display="block"
-			background="--color-background"
-		>
-			<Override
-				slot="SectionContent"
-				sm-margin="0px 0 0px 0"
-				md-justify-content="space-around"
-				md-height="500px"
-				lg-height="600px"
-				lg-justify-content="space-between"
-				justify-content="space-between"
-				height="800px"
-			/>
-			<Components.PodcasterCard display="flex" background="#ffffff">
-				<Override slot="text" font="--t2" />
-				<Override slot="box" />
-			</Components.PodcasterCard>
-			<Components.PodcasterCard box-shadow="--shadow" background="#ffffff">
-				<Override slot="text" font="--t2">
-					Владимир Путин
-				</Override>
-				<Override slot="box" background="#838383 url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/square_320_bb4b277b65949db59997d7938661b118.jpg?v=2021-03-21T00:35:44.602Z) bottom/100%" />
-			</Components.PodcasterCard>
-			<Components.PodcasterCard box-shadow="--shadow" background="#ffffff">
-				<Override
-					slot="text1"
-					sm-display="block"
-					display="block"
-					font="--text"
-					color="--fontGray"
-				/>
-				<Override slot="text" font="--t2">
-					Покемон Пикачу
-				</Override>
-				<Override slot="box" background="#ffffff url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/Ash_Pikachu.png?v=2021-03-21T00:43:20.111Z) 0% 0%/100% no-repeat" />
-				<Override slot="box1" font="--t2" />
-			</Components.PodcasterCard>
-		</Section>
-		<Section quarkly-title="FooterSection">
-			<Box display="flex" justify-content="space-between">
-				<Box quarkly-title="AudioSticker">
-					<Icon category="md" icon={MdVolumeUp} />
-				</Box>
-				<Components.BroadcastButton
-					sm-box-shadow="--podcasterShadow"
-					height="42px"
-					width="150px"
-					background="#fff"
-					box-shadow="--shadow"
-				>
-					<Override
-						slot="box"
-						height="30px"
-						width="80px"
-						margin="6px 0px 5px 4px"
-						box-shadow="--shadow"
-						background="#ffd439"
-					/>
-				</Components.BroadcastButton>
-				<Box quarkly-title="Sticker">
-					<Icon category="gi" icon={GiBulletImpacts} />
-				</Box>
-			</Box>
+		<Section quarkly-title="Content">
+			<Components.BroadcastersContainer />
 		</Section>
 		<Link
 			font={"--capture"}

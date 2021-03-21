@@ -11,7 +11,8 @@ export default {
 				"60563842f2b826001ebe89fc",
 				"60563f0cf11f97001e812177",
 				"605661fb36274f001fc8d978",
-				"6056b53c36274f001fc8dbf2"
+				"6056b53c36274f001fc8dbf2",
+				"60570e74ff9331001f9eb0c3"
 			]
 		},
 		"6056093da1e3530020715a3c": {
@@ -48,6 +49,11 @@ export default {
 			"id": "6056b53c36274f001fc8dbf2",
 			"pageUrl": "profile",
 			"name": "Profile"
+		},
+		"60570e74ff9331001f9eb0c3": {
+			"id": "60570e74ff9331001f9eb0c3",
+			"pageUrl": "livebroadcast1",
+			"name": "VipListeners"
 		}
 	},
 	"mode": "production",

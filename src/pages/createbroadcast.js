@@ -45,7 +45,6 @@ export default (() => {
 				type="text"
 				name="translationName"
 				padding="20px 20px 20px 20px"
-				background="--color-background"
 				border-width={0}
 				border-color="rgba(119, 119, 119, 0.47)"
 				box-shadow="--podcasterShadow"
@@ -53,6 +52,8 @@ export default (() => {
 				margin="0px 0px 20px 0px"
 				md-padding="15px 15px 15px 15px"
 				md-margin="0px 0px 15px 0px"
+				color="#ffffff"
+				background="#ffffff"
 			/>
 			<Input
 				quarkly-title="InputAdd"
@@ -89,6 +90,7 @@ export default (() => {
 				min-height="120px"
 				max-width="100%"
 				max-height="180px"
+				border-color="#ffffff"
 			/>
 			<Button
 				width="300px"
@@ -96,7 +98,7 @@ export default (() => {
 				height="70px"
 				background="#FED851"
 				border-radius="20px"
-				font="30px Roboto"
+				font="--t2"
 				box-shadow="--podcasterShadow"
 				md-padding="5px 20px 5px 20px"
 				md-font="24px Roboto"
