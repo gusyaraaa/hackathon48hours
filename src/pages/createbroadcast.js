@@ -1,9 +1,10 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Box, Text, Button } from "@quarkly/widgets";
+import { Theme, Link, Box, Input, Button } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
 import { Override, Section } from "@quarkly/components";
+import * as Components from "components";
 export default (() => {
 	return <Theme theme={theme}>
 		<GlobalQuarklyPageStyles pageUrl={"createbroadcast"} />
@@ -14,13 +15,13 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Section quarkly-title="MainSection" background="#FCFCFC" height="1300px">
+		<Section quarkly-title="MainSection" background="#FCFCFC" height="auto" padding="30px 0 200px 0">
 			<Override slot="SectionContent" />
 			<Box
 				display="flex"
 				width="250px"
 				height="auto"
-				margin="70px auto 0px auto"
+				margin="70px auto 30px auto"
 				quarkly-title="Avatar"
 				min-width="200px"
 				min-height="auto"
@@ -33,90 +34,74 @@ export default (() => {
 					height="300px"
 					border-radius="100px"
 					display="flex"
+					md-width="200px"
+					md-height="200px"
 				/>
 			</Box>
-			<Box
+			<Input
 				quarkly-title="InputNamePodcast"
-				display="flex"
-				height="70px"
 				width="100%"
-				justify-content="center"
-				flex-direction="column"
-				margin="50px 20px 0px auto"
-				background="#ffffff"
-				border-radius="20px"
-				box-shadow="5px 7px 20px 0 rgba(0, 0, 0, 0.75)"
-			>
-				<Box quarkly-title="LineBox" display="flex" width="100%" justify-content="left">
-					<Text quarkly-title="Box'sTest" margin="16px 0px 16px 20px" font="normal 300 26px sans-serif" color="#E0E0E0">
-						Введите название трансляции{"\n\n"}
-					</Text>
-				</Box>
-			</Box>
-			<Box
-				quarkly-title="InputNamePodcast"
-				display="flex"
-				height="70px"
-				justify-content="center"
-				flex-direction="column"
-				margin="50px 20px 0px auto"
-				background="#ffffff"
-				border-radius="20px"
-				box-shadow="5px 7px 20px 0 rgba(0, 0, 0, 0.75)"
+				placeholder="Введите название трансляции"
+				required
+				type="text"
+				name="translationName"
+				padding="20px 20px 20px 20px"
+				background="--color-background"
+				border-width={0}
+				border-color="rgba(119, 119, 119, 0.47)"
+				box-shadow="--podcasterShadow"
+				border-radius="15px"
+				margin="0px 0px 20px 0px"
+				md-padding="15px 15px 15px 15px"
+				md-margin="0px 0px 15px 0px"
+			/>
+			<Input
+				quarkly-title="InputAdd"
 				width="100%"
-			>
-				<Box quarkly-title="LineBox" display="flex" width="100%" justify-content="left">
-					<Text quarkly-title="Box'sTest" margin="16px 0px 16px 20px" font="normal 300 26px sans-serif" color="#E0E0E0">
-						@добавьте _пользователей{"\n\n"}
-					</Text>
-				</Box>
-			</Box>
-			<Box
+				placeholder="@добавьте_пользователей"
+				required
+				type="text"
+				name="listeners"
+				padding="20px 20px 20px 20px"
+				border-width={0}
+				border-color="--color-fontGray"
+				box-shadow="--podcasterShadow"
+				border-radius="15px"
+				margin="0px 0px 20px 0px"
+				md-padding="15px 15px 15px 15px"
+				md-margin="0px 0px 15px 0px"
+			/>
+			<Input
 				quarkly-title="InputDescriptionPodcast"
-				display="flex"
-				height="150px"
-				justify-content="center"
-				flex-direction="column"
-				margin="50px 20px 0px auto"
-				background="#ffffff"
-				border-radius="20px"
-				box-shadow="5px 7px 20px 0 rgba(0, 0, 0, 0.75)"
 				width="100%"
-				md-height="150px"
-				lg-height="150px"
-			>
-				<Box
-					quarkly-title="LineBox"
-					display="flex"
-					width="100%"
-					justify-content="left"
-					md-justify-content="flex-start"
-					md-margin="-70px 0px 0px 0px"
-				>
-					<Text
-						quarkly-title="Box'sTest"
-						margin="-50px 0px 16px 20px"
-						font="normal 300 26px sans-serif"
-						color="#E0E0E0"
-						lg-margin="-50px 0px 16px 20px"
-						md-margin="0px 0px 16px 20px"
-					>
-						Введите описание к  трансляции{"\n\n"}
-					</Text>
-				</Box>
-			</Box>
+				placeholder="Введите описание трансляции"
+				required
+				type="text"
+				name="description"
+				padding="20px 20px 20px 20px"
+				border-width={0}
+				border-color="--color-fontGray"
+				box-shadow="--podcasterShadow"
+				border-radius="15px"
+				margin="0px 0px 40px 0px"
+				md-padding="15px 15px 15px 15px"
+				md-margin="0px 0px 30px 0px"
+			/>
 			<Button
 				width="300px"
-				margin="30px auto 0px auto"
+				margin="55px auto 0px auto"
 				height="70px"
 				background="#FED851"
 				border-radius="20px"
 				font="30px Roboto"
-				box-shadow="4px 7px 20px 0 rgba(0, 0, 0, 0.75)"
+				box-shadow="--podcasterShadow"
+				md-padding="5px 20px 5px 20px"
+				md-font="24px Roboto"
 			>
 				Начать
 			</Button>
 		</Section>
+		<Components.NavBar />
 		<Link
 			font={"--capture"}
 			font-size={"10px"}

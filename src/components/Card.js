@@ -4,7 +4,6 @@ import { Box, Text } from "@quarkly/widgets";
 const defaultProps = {
 	"sm-width": "162px",
 	"sm-height": "auto",
-	"sm-background": "#ffffff",
 	"quarkly-title": "Card",
 	"sm-display": "flex",
 	"sm-flex-direction": "column",

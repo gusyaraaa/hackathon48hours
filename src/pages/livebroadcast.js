@@ -21,7 +21,7 @@ export default (() => {
 			<Override slot="SectionContent" />
 			<Box
 				quarkly-title="HeaderTitleBox"
-				margin="75px 0px 0px 0px"
+				margin="50px 0px 0px 15px"
 				sm-display="flex"
 				sm-align-items="center"
 				sm-justify-content="start"

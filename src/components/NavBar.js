@@ -34,7 +34,6 @@ const overrides = {
 	"link": {
 		"kind": "Link",
 		"props": {
-			"href": "#",
 			"quarkly-title": "LinkProfile",
 			"background": "rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/6056093da1e3530020715a39/images/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_2021-03-20_192233%201.svg?v=2021-03-21T01:19:14.821Z) 0% 0% /100% no-repeat scroll padding-box",
 			"width": "64px",
@@ -44,7 +43,8 @@ const overrides = {
 			"md-width": "38px",
 			"md-height": "38px",
 			"sm-width": "24px",
-			"sm-height": "24px"
+			"sm-height": "24px",
+			"href": "Profile"
 		}
 	},
 	"link1": {
@@ -161,11 +161,11 @@ const NavBar = props => {
 		<Box {...override("box")}>
 			<Link {...override("link")} />
 			<Link {...override("link1")} />
-			<Box {...override("box1")}>
-				<Link {...override("createBroadcastLink")}>
+			<Link {...override("createBroadcastLink")}>
+				<Box {...override("box1")}>
 					<Icon {...override("icon")} />
-				</Link>
-			</Box>
+				</Box>
+			</Link>
 			<Link {...override("link2")} />
 		</Box>
 		{children}

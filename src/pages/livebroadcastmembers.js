@@ -16,10 +16,10 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Section quarkly-title="HeaderSection">
+		<Section quarkly-title="HeaderSection" background="--color-background">
 			<Box
 				quarkly-title="HeaderTitleBox"
-				margin="75px 4px 0px 0px"
+				margin="50px 4px 0px 0px"
 				sm-display="flex"
 				sm-min-height={0}
 				sm-align-items="center"
@@ -35,7 +35,7 @@ export default (() => {
 					margin="px 0 0 4px"
 					display="inline"
 					sm-margin="px 0px 0 4px"
-					font="--lgHeadline1"
+					font="--t1"
 					lg-font="--lgHeadline2"
 					md-font="--lgHeadline3"
 					sm-font="normal normal 500 16px/120% --fontFamily-sans"

@@ -15,14 +15,14 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Section quarkly-title="HeaderSection">
-			<Box quarkly-title="HeaderTitleBox" margin="70px 0px 0px 20px" font="--t1">
+		<Section quarkly-title="HeaderSection" background="--color-background">
+			<Box quarkly-title="HeaderTitleBox" margin="50px 0px 0px 15px" font="--t1">
 				<Text quarkly-title="Title">
 					Сейчас в эфире
 				</Text>
 			</Box>
 		</Section>
-		<Section quarkly-title="Main" background="#ffffff" flex-wrap="wrap">
+		<Section quarkly-title="Main" background="--color-background" flex-wrap="wrap">
 			<Override
 				slot="SectionContent"
 				flex-direction="row"
@@ -74,11 +74,11 @@ export default (() => {
 					sm-width="120px"
 					sm-height="120px"
 				/>
-				<Box quarkly-title="TextBlock" margin="0px 40px 0px 40px" font="--t2">
+				<Box quarkly-title="TextBlock" margin="0px 40px 0px 40px" font="--t2" sm-font="450 18px Roboto, sans-serif">
 					<Box height="30px" display="flex" justify-content="left" quarkly-title="UpperRow">
 						<Image
-							width="5px"
-							height="5px"
+							width="3px"
+							height="3px"
 							margin="auto 10px auto 5px"
 							quarkly-title="RedPoint"
 							background="#ff0404"
@@ -92,7 +92,13 @@ export default (() => {
 					</Box>
 				</Box>
 				<Box quarkly-title="LowLine" height="30px" margin="5px 40px 0px 70px" display="flex">
-					<Text font="--text" margin="0px 0px 0px 0px" lg-height="50px">
+					<Text
+						font="--text"
+						margin="0px 0px 0px 0px"
+						lg-height="50px"
+						sm-font="16px Roboto, sans-serif"
+						width="300px"
+					>
 						Анастасия Ивлеева
 					</Text>
 					<Text
@@ -104,11 +110,7 @@ export default (() => {
 						md-margin="0 0px 0px 100px"
 						md-height="60px"
 					>
-						22
-						<br />
-						{" "}:
-						<br />
-						{" "}00
+						345+
 					</Text>
 				</Box>
 			</Box>
@@ -159,8 +161,8 @@ export default (() => {
 				<Box quarkly-title="TextBlock" margin="0px 40px 0px 40px" font="--t2">
 					<Box height="30px" display="flex" justify-content="left" quarkly-title="UpperRow">
 						<Image
-							width="5px"
-							height="5px"
+							width="3px"
+							height="3px"
 							margin="auto 10px auto 5px"
 							quarkly-title="RedPoint"
 							background="#ff0404"
@@ -168,13 +170,19 @@ export default (() => {
 							border-color="#ffffff"
 							border-radius="50%"
 						/>
-						<Text margin="auto 0px auto 0px" quarkly-title="PodcastName">
+						<Text margin="auto 0px auto 0px" quarkly-title="PodcastName" sm-font="450 18px Roboto, sans-serif">
 							Женщина, вы кто?{"\n\n"}
 						</Text>
 					</Box>
 				</Box>
 				<Box quarkly-title="LowLine" height="30px" margin="5px 40px 0px 70px" display="flex">
-					<Text font="--text" margin="0px 0px 0px 0px" lg-height="50px">
+					<Text
+						font="--text"
+						margin="0px 0px 0px 0px"
+						lg-height="50px"
+						sm-font="16px Roboto, sans-serif"
+						width="320px"
+					>
 						Анастасия Ивлеева
 					</Text>
 					<Text
@@ -186,11 +194,7 @@ export default (() => {
 						md-margin="0 0px 0px 100px"
 						md-height="60px"
 					>
-						22
-						<br />
-						{" "}:
-						<br />
-						{" "}00
+						1234+
 					</Text>
 				</Box>
 			</Box>
@@ -241,8 +245,8 @@ export default (() => {
 				<Box quarkly-title="TextBlock" margin="0px 40px 0px 40px" font="--t2">
 					<Box height="30px" display="flex" justify-content="left" quarkly-title="UpperRow">
 						<Image
-							width="5px"
-							height="5px"
+							width="3px"
+							height="3px"
 							margin="auto 10px auto 5px"
 							quarkly-title="RedPoint"
 							background="#ff0404"
@@ -250,13 +254,19 @@ export default (() => {
 							border-color="#ffffff"
 							border-radius="50%"
 						/>
-						<Text margin="auto 0px auto 0px" quarkly-title="PodcastName">
+						<Text margin="auto 0px auto 0px" quarkly-title="PodcastName" sm-font="450 18px Roboto, sans-serif">
 							Женщина, вы кто?{"\n\n"}
 						</Text>
 					</Box>
 				</Box>
 				<Box quarkly-title="LowLine" height="30px" margin="5px 40px 0px 70px" display="flex">
-					<Text font="--text" margin="0px 0px 0px 0px" lg-height="50px">
+					<Text
+						font="--text"
+						margin="0px 0px 0px 0px"
+						lg-height="50px"
+						sm-font="16px Roboto, sans-serif"
+						width="300px"
+					>
 						Анастасия Ивлеева
 					</Text>
 					<Text
@@ -268,11 +278,7 @@ export default (() => {
 						md-margin="0 0px 0px 100px"
 						md-height="60px"
 					>
-						22
-						<br />
-						{" "}:
-						<br />
-						{" "}00
+						22:00
 					</Text>
 				</Box>
 			</Box>
@@ -323,8 +329,8 @@ export default (() => {
 				<Box quarkly-title="TextBlock" margin="0px 40px 0px 40px" font="--t2">
 					<Box height="30px" display="flex" justify-content="left" quarkly-title="UpperRow">
 						<Image
-							width="5px"
-							height="5px"
+							width="3px"
+							height="3px"
 							margin="auto 10px auto 5px"
 							quarkly-title="RedPoint"
 							background="#ff0404"
@@ -338,7 +344,7 @@ export default (() => {
 					</Box>
 				</Box>
 				<Box quarkly-title="LowLine" height="30px" margin="5px 40px 0px 70px" display="flex">
-					<Text font="--text" margin="0px 0px 0px 0px" lg-height="50px">
+					<Text font="--text" margin="0px 0px 0px 0px" lg-height="50px" width="300px">
 						Анастасия Ивлеева
 					</Text>
 					<Text
@@ -350,21 +356,20 @@ export default (() => {
 						md-margin="0 0px 0px 100px"
 						md-height="60px"
 					>
-						22
-						<br />
-						{" "}:
-						<br />
-						{" "}00
+						12+
 					</Text>
 				</Box>
 			</Box>
 		</Section>
 		<Components.NavBar>
-			<Override slot="link1" />
+			<Override slot="link1" width="40px" height="40px" />
 			<Override slot="box" />
 			<Override slot="SectionContent" />
-			<Override slot="createBroadcastLink" position="static" width="100%" height="100%" />
-			<Override slot="icon" position="relative" top="16%" left="20%" />
+			<Override slot="createBroadcastLink" margin="-60px 0px 0px 0px" />
+			<Override slot="icon" top="16%" left="20%" />
+			<Override slot="box1" margin="0px 0px 0px 0px" />
+			<Override slot="link" width="40px" height="40px" />
+			<Override slot="link3" width="40px" height="40px" />
 		</Components.NavBar>
 		<Link
 			font={"--capture"}

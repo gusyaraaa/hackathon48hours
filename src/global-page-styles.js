@@ -9,8 +9,6 @@ const pageStyles = {
     "livebroadcast": {},
     "livebroadcastmembers": {},
     "createbroadcast": {},
-    "pageregistertranslation": {},
-    "createroom": {},
     "profile": {}
 };
 

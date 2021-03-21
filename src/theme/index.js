@@ -46,7 +46,8 @@ export default {
 		"greenTag": "#14C65B",
 		"darkPurpleTag": "#44406F",
 		"yellowTag": "#FAD205",
-		"redTag": "#FA3105"
+		"redTag": "#FA3105",
+		"subscribe": " #FED851"
 	},
 	"fontFamily": {
 		"sans": "-apple-system, system-ui, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
@@ -75,7 +76,7 @@ export default {
 		"l": "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
 		"xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1)",
 		"xxl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
-		"podcasterShadow": "6px 4px 10px rgba(237, 218, 255, 0.6)",
+		"podcasterShadow": "6px 4px 10px rgba(237, 218, 255, 0.8)",
 		"podcastShadowActive": "0 0 10px --color-shadowActivePodcaster"
 	},
 	"background": {
